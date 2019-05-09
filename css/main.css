@@ -1,0 +1,75 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+}
+
+body > header {
+  width: 100%;
+  height: 40px;
+  background-color: blue;
+}
+
+body > header > * {
+  display: inline-block;
+  float: left;
+}
+
+#hero {
+  display: inline-block;
+  width: 100%;
+  background-color: aqua;
+}
+
+#service1 {
+  display: inline-block;
+  width: 100%;
+  background-color: chartreuse;
+}
+
+#service1 > * {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+#service2 {
+  display: inline-block;
+  width: 100%;
+  background-color: darkgreen;
+}
+
+#service2 > * {
+  display: inline-block;
+  float: left;
+  width: calc 33.33333%;
+}
+
+#service3 {
+  display: inline-block;
+  width: 100%;
+  background-color: forestgreen;
+}
+
+#service3 > * {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+
+#ads {
+  background-color: blueviolet;
+}
+
+footer {
+  background-color: gold;
+}
+/*# sourceMappingURL=main.css.map */
