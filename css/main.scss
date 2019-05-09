@@ -7,5 +7,104 @@ body * {
           box-sizing: border-box;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 10px 1fr 10px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+      ". header ."
+      ". hero ."
+      ". intro ."
+      ". services ."
+      ". resume ."
+      ". freelance ."
+      ". portfolio ."
+      ". testimonials ."
+      ". blogs ."
+      ". contact ."
+      ". social ."
+      ". footer .";
+}
 
+header {
+  grid-area: header;
+  height: 40px;
+  display: inline-block;
+  > h2 {
+    display: inline-block;
+    float: left;
+  }
+  > nav {
+    display: inline-block;
+    float: right;
+  }
+}
 
+#hero {
+  grid-area: hero;
+  height: calc(100vh - 40px);
+}
+
+#intro {
+  grid-area: intro;
+}
+
+#services {
+  grid-area: services;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    ".";
+  background-color: #F4F4F4;
+
+    > h1 {
+      grid-area: title;
+    }
+    .service {
+      
+    }
+}
+
+#resume {
+  grid-area: resume; 
+}
+
+#freelance {
+  grid-area: freelance;
+  background-color: #FF2F20;
+}
+
+#portfolio {
+  grid-area: portfolio;
+}
+
+#testimonials {
+  grid-area: testimonials;
+  background-color: #F4F4F4;
+}
+
+#blogs {
+  grid-area: blogs;
+}
+
+#contact {
+  grid-area: contact;
+  background-color: #F4F4F4;
+}
+
+#social {
+  grid-area: social;
+  background-color: #181818;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #202020;
+}
+
+// @media ( min-width: 480px ) {
+//   body {
+//     grid-template-areas: 
+//   }
+// }

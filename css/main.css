@@ -7,69 +7,115 @@ body * {
   box-sizing: border-box;
 }
 
-.container {
-  display: inline-block;
-  width: 100%;
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10px 1fr 10px;
+      grid-template-columns: 10px 1fr 10px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". header ." ". hero ." ". intro ." ". services ." ". resume ." ". freelance ." ". portfolio ." ". testimonials ." ". blogs ." ". contact ." ". social ." ". footer .";
 }
 
-body > header {
-  width: 100%;
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header;
   height: 40px;
-  background-color: blue;
+  display: inline-block;
 }
 
-body > header > * {
+header > h2 {
   display: inline-block;
   float: left;
+}
+
+header > nav {
+  display: inline-block;
+  float: right;
 }
 
 #hero {
-  display: inline-block;
-  width: 100%;
-  background-color: aqua;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: hero;
+  height: calc(100vh - 40px);
 }
 
-#service1 {
-  display: inline-block;
-  width: 100%;
-  background-color: chartreuse;
+#intro {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: intro;
 }
 
-#service1 > * {
-  display: inline-block;
-  float: left;
-  width: 50%;
+#services {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: services;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "title" ".";
+  background-color: #F4F4F4;
 }
 
-#service2 {
-  display: inline-block;
-  width: 100%;
-  background-color: darkgreen;
+#services > h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
 }
 
-#service2 > * {
-  display: inline-block;
-  float: left;
-  width: calc 33.33333%;
+#resume {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: resume;
 }
 
-#service3 {
-  display: inline-block;
-  width: 100%;
-  background-color: forestgreen;
+#freelance {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: freelance;
+  background-color: #FF2F20;
 }
 
-#service3 > * {
-  display: inline-block;
-  float: left;
-  width: 100%;
+#portfolio {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  grid-area: portfolio;
 }
 
-#ads {
-  background-color: blueviolet;
+#testimonials {
+  -ms-grid-row: 8;
+  -ms-grid-column: 2;
+  grid-area: testimonials;
+  background-color: #F4F4F4;
+}
+
+#blogs {
+  -ms-grid-row: 9;
+  -ms-grid-column: 2;
+  grid-area: blogs;
+}
+
+#contact {
+  -ms-grid-row: 10;
+  -ms-grid-column: 2;
+  grid-area: contact;
+  background-color: #F4F4F4;
+}
+
+#social {
+  -ms-grid-row: 11;
+  -ms-grid-column: 2;
+  grid-area: social;
+  background-color: #181818;
 }
 
 footer {
-  background-color: gold;
+  -ms-grid-row: 12;
+  -ms-grid-column: 2;
+  grid-area: footer;
+  background-color: #202020;
 }
 /*# sourceMappingURL=main.css.map */
